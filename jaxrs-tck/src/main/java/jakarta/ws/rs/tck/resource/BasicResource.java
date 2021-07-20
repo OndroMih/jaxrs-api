@@ -17,6 +17,7 @@ public class BasicResource {
     private static final Logger LOG = Logger.getLogger(BasicResource.class.getName());
 
     @GET
+    @Path("{id}")
     public Response getResponse(@PathParam("id") String id) {
         LOG.info("getResponse " + id);
         System.out.println("getResponse " + id);

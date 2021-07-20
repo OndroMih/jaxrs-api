@@ -2,8 +2,6 @@ package jakarta.ws.rs.tck.resource;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-import java.io.IOException;
-
 import okhttp3.OkHttpClient;
 import okhttp3.MediaType;
 import okhttp3.Request;
@@ -20,6 +18,7 @@ import org.junit.jupiter.api.extension.ExtendWith;
 
 import jakarta.ws.rs.tck.AbstractTest;
 import jakarta.ws.rs.tck.Util;
+import org.jboss.arquillian.container.test.api.RunAsClient;
 
 @ExtendWith(ArquillianExtension.class)
 public class BasicResourceTest extends AbstractTest {
@@ -35,6 +34,7 @@ public class BasicResourceTest extends AbstractTest {
     }
 
     @Test
+    @RunAsClient
     public void test_get() throws Exception {
         System.out.println("ANDY STARTING TEST!!!");
         try {
@@ -51,6 +51,7 @@ public class BasicResourceTest extends AbstractTest {
     }
 
     @Test
+    @RunAsClient
     public void test_post() throws Exception {
         System.out.println("ANDY STARTING TEST!!!");
         try {
